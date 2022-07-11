@@ -21,4 +21,4 @@ class IdentityStore extends MockBase {
     }
 }
 
-new IdentityStore({min: 0, max: 250}).listen(80);
+new IdentityStore().listen(parseInt(process.env.PORT || "80"));

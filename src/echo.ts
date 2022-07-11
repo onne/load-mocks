@@ -16,4 +16,4 @@ class EchoServer extends MockBase {
     }
 }
 
-new EchoServer({min: 0, max: 250}).listen(80);
+new EchoServer().listen(parseInt(process.env.PORT || "80"));
