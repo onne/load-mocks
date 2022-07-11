@@ -1,7 +1,7 @@
 import { MockBase } from './mockBase';
 class EchoServer extends MockBase {
-    constructor(latencyLimits: { min: number, max: number }) {
-        super(latencyLimits);
+    constructor() {
+        super();
         this.app.get('/', (req, res) => {
             this.randomlyDelay().then(() => {
                 res.send('ok');

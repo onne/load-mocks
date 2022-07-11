@@ -6,8 +6,8 @@ const user = {
 }
 
 class IdentityStore extends MockBase {
-    constructor(latencyLimits: { min: number, max: number }) {
-        super(latencyLimits);
+    constructor() {
+        super();
         this.app.get('/user', (req, res) => {
             this.randomlyDelay().then(() => {
                 res.send(user);
